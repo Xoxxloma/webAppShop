@@ -43,7 +43,7 @@ export const InfoPage = () => {
         </ListGroup>
         <Accordion defaultActiveKey="0" className="mt-4">
           <Accordion.Item eventKey="0">
-            <Accordion.Header>Инструкция. Если не знаешь что делать ТЫК сюда</Accordion.Header>
+            <Accordion.Header>Инструкция.</Accordion.Header>
             <Accordion.Body>
               <p>
                 Если у вас телефон на базе Android - просто скачайте наше приложение <Alert.Link href="https://play.google.com/store/apps/details?id=com.pepavpn">Pepa VPN</Alert.Link>.
