@@ -21,8 +21,8 @@ export const ShopScreen = () => {
   }, [selectedTariff])
 
   React.useEffect(() => {
-    axios.get('http://pepavpn.ru:4003/getConfig').then((res) => setTariffs(res.data.tariffs))
-  })
+    axios.get('https://pepavpn.ru:4004/getConfig').then((res) => setTariffs(res.data.tariffs))
+  }, [])
 
   React.useEffect(() => {
     tg.MainButton.onClick(onSendDataHandler)
