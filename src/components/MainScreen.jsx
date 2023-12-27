@@ -1,25 +1,49 @@
 import React from 'react';
+import loading from '../assets/loading.gif'
+import googlePlay from '../assets/google-play.png'
+import telegram from '../assets/tg_button_large.png'
 import Fire from '../assets/fire.png'
 import City from '../assets/city.png'
 import GlassesDown from '../assets/glassesDown.png'
 
 export const MainScreen = () => {
   return (
-    <div style={{position: 'relative', overflow: 'hidden'}}>
-      <img src={Fire} style={{ width: '100%', height: '150%', position: 'absolute', top: -80, justifyContent: 'center', zIndex: -100}} />
-      <img src={City} style={{ borderTopRightRadius: 220, borderTopLeftRadius: 220, width: "100%", height: '30%', position: 'absolute', bottom: 0, right: 0, left: 0, zIndex: -100}} />
-      <div style={{ flexDirection: 'column', flex: 1, display: "flex", justifyContent: 'center', alignItems: 'center', height: '100vh'}}>
-        <div style={{ fontFamily: 'TitilliumWeb-Regular', color: 'white', fontSize: 48, marginBottom: 10}}>
-          Pepa VPN
+    <div className="main-page-container">
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 10, justifyContent: 'center'}}>
+            <div style={{ position: 'relative'}}>
+                <div style={{width: 350, height: 350}}>
+                    <svg
+                        viewBox="0 0 100 100"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            style={{ fill: "transparent"}}
+                            id="circlePath"
+                            d="
+                          M 10, 50
+                          a 40,40 0 1,1 80,0
+                          40,40 0 1,1 -80,0
+                        "
+                        />
+                        <text style={{ fontSize: 14, whiteSpace: "break-spaces" }}>
+                            <textPath href="#circlePath">
+                                IT   SOLUTIONS   BASED   ON   MEMES
+                            </textPath>
+                        </text>
+                    </svg>
+                </div>
+                <img className='image' src={loading} />
+            </div>
         </div>
-        <div style={{ borderRadius: 200 / 2, width: 200, height: 200, borderWidth: 30, marginTop: 10, marginBottom: 10}}>
-          <img src={GlassesDown} style={{ borderRadius: 200 / 2, width: '100%', height: '100%'}} />
+        <div className="links-container">
+            <a className="telegram-button" href="https://t.me/vpn_pepa_bot" target="_blank">
+                <img style={{marginRight: 5}} width='20px' height="20px" alt='Get it on Google Play' src={telegram} />
+                <span>@VPN_Pepa_bot</span>
+            </a>
+            <a href='https://play.google.com/store/apps/details?id=com.pepavpn&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
+                <img width='150px' alt='Get it on Google Play' src={googlePlay} />
+            </a>
         </div>
-        <div style={{ padding: '10px', marginTop: 10, marginBottom: 10}}>
-          Profile number
-        </div>
-        <button style={{ padding: '20px', fontSize: 18, color: '#FFFFFF', background: 'orange', marginTop: 10, marginBottom: 10}}>Купить подписку</button>
-      </div>
     </div>
   )
 }

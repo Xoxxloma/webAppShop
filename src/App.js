@@ -7,9 +7,11 @@ import {ShopScreen} from "./components/ShopScreen";
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 import {InfoPage} from "./components/InfoPage";
+import {MainScreen} from "./components/MainScreen";
 
 const headers = {
-  '/': 'Мой профиль',
+  '/': 'Pepa VPN',
+  '/info': 'Мой профиль',
   '/shop': 'VPN лавка Пепе'
 }
 
@@ -39,7 +41,8 @@ function App() {
         </Container>
       </Navbar>
       <Routes>
-        <Route index element={<InfoPage />} />
+        <Route index element={<MainScreen />} />
+        <Route path={"info"} element={<InfoPage />} />
         <Route path={'shop'} element={ <ShopScreen />} />
       </Routes>
     </div>

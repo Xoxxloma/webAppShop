@@ -2,11 +2,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow-x: 'hidden';
 }
 
 body {
-  background: black;
   color: var(--tg-theme-text-color)
 }
 
@@ -23,3 +21,54 @@ body {
   border-color: #D9550D !important;
   box-shadow: none !important;
 }
+
+.main-page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin-top: 30px;
+}
+.image {
+  height: 300px;
+  width: 300px;
+  position: absolute;
+  top: 25px;
+  left: 15px;
+}
+.telegram-button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: top;
+  height: 45px;
+  width: 150px;
+  box-sizing: border-box;
+  cursor: pointer;
+  background-color: #0088cc;
+  border-radius: 3px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 11px;
+  color: #FFF;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.telegram-button:hover{
+  color: #FFF;
+  background-color: #007dbb;
+}
+
+.telegram-button:active{
+  background-color: #026698;
+}
+
+.links-container {
+  position: absolute;
+  bottom: 15px;
+  display: flex;
+  gap: 10px;
+}
+

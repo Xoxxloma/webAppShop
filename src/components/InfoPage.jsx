@@ -27,8 +27,8 @@ export const InfoPage = () => {
   }, [tgUser])
   console.log(user, 'user')
 
-  if (processState === 'LOADING' || processState === 'BLANK') return <div>ZAGRUZ OCHKA</div>
-  if (processState === 'FAIURE') return <div>PIZDOS BANDOS</div>
+  if (processState === 'LOADING' || processState === 'BLANK') return <div>ЗАГРУЗКА...</div>
+  if (processState === 'FAILURE') return <div>НЕПРЕДВИДЕННАЯ ОШИБКА</div>
   return (
     <div className="container">
     {user && (
