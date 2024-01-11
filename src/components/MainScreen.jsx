@@ -2,16 +2,13 @@ import React from 'react';
 import loading from '../assets/loading.gif'
 import googlePlay from '../assets/google-play.png'
 import telegram from '../assets/tg_button_large.png'
-import Fire from '../assets/fire.png'
-import City from '../assets/city.png'
-import GlassesDown from '../assets/glassesDown.png'
 
 export const MainScreen = () => {
   return (
     <div className="main-page-container">
         <div style={{ display: 'flex', flexDirection: 'column', gap: 10, justifyContent: 'center'}}>
             <div style={{ position: 'relative'}}>
-                <div style={{width: 350, height: 350}}>
+                <div className="motto">
                     <svg
                         viewBox="0 0 100 100"
                         xmlns="http://www.w3.org/2000/svg"
@@ -32,7 +29,7 @@ export const MainScreen = () => {
                         </text>
                     </svg>
                 </div>
-                <img className='image' src={loading} />
+                <img className='image logo' src={loading} />
             </div>
         </div>
         <div className="links-container">

@@ -43,7 +43,7 @@ export const ShopScreen = () => {
 
   return (
     <>
-      <div style={{padding: 15, display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+      <div style={{padding: 15, display: 'flex', flexWrap: 'wrap', gap: 20, justifyContent: 'center', backgroundColor: 'rgba(0, 0, 0, 0.2)'}}>
       {Object.keys(tariffs).map((key) => <ShopCard key={key} tariff={tariffs[key]} selectTariffHandler={selectTariffHandler} />)}
       </div>
     </>

@@ -35,7 +35,7 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar style={{background: '#D9550D'}}>
+      <Navbar style={{background: '#D9550D', height: 60}}>
         <Container>
           <Navbar.Brand style={{color: '#FFFFFF', fontSize: "28px"}}>{headers[pathname]}</Navbar.Brand>
         </Container>
